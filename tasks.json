@@ -1,0 +1,58 @@
+{
+    // 欲了解更多信息，请访问: https://code.visualstudio.com/docs/editor/tasks
+    "tasks": [
+        // 使用 gcc 编译器编译 C 文件
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc.exe 生成活动文件",
+            "command": "D:\\Dev\\DevKit\\CXX\\mingw64-posix-seh-x64-8.1.0\\bin\\gcc.exe",
+            "args": [
+                "-g",
+                "-std=c99",
+                "-Wall",
+                "${file}",
+                // "${fileDirname}\\include\\mpc.c",
+                "-o",
+                "${workspaceFolder}\\.bin\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        },
+        // 使用 g++ 编译器编译 C++ 文件
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe 生成活动文件",
+            "command": "D:\\Dev\\DevKit\\CXX\\mingw64-posix-seh-x64-8.1.0\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "-Wall",
+                "${file}",
+                "-o",
+                "${workspaceFolder}\\.bin\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        }
+    ],
+    "version": "2.0.0"
+}
+
+// 预定义变量: https://code.visualstudio.com/docs/editor/variables-reference
